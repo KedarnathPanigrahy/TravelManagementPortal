@@ -1,0 +1,59 @@
+server:
+  port: 8075
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: TRAVEL-MANAGEMENT-PORTAL
+          uri: lb://TRAVEL-MANAGEMENT-PORTAL
+          predicates:
+            - Path=/transport/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: TRAVEL-MANAGEMENT-PORTAL
+                fallbackuri: forward:/transport-service-fallback
+        - id: TRANSPORT-SERVICE
+          uri: lb://TRANSPORT-SERVICE
+          predicates:
+            - Path=/franchises/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: TRANSPORT-SERVICE
+                fallbackuri: forward:/transport-franchise-service-fallback
+        - id: CUSTOMER-SERVICE
+          uri: lb://CUSTOMER-SERVICE
+          predicates:
+            - Path=/customers/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: CUSTOMER-SERVICE
+                fallbackuri: forward:/customer-service-fallback
+        - id: NOTIFICATION-SERVICE
+          uri: lb://NOTIFICATION-SERVICE
+          predicates:
+            - Path=/notify/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: NOTIFICATION-SERVICE
+                fallbackuri: forward:/notification-service-fallback
+
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream

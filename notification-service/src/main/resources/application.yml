@@ -1,0 +1,11 @@
+server:
+  port: 8057
+
+spring:
+  application:
+    name: NOTIFICATION-SERVICE
+      mail:    host: smtp.gmail.host
+    port: 587
+    username: techiekedar90@gmail.com
+    password: oecjzzaajbjfbbbi    properties:      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true

@@ -1,0 +1,62 @@
+[
+    {
+        "firstName": "Mark",
+        "lastName": "Ricard",
+        "userName": "mark",
+        "password": "password",
+        "emailId": "mark@test.com",
+        "mobileNumber": "1234567890",
+        "address": "10th Main",
+        "pinCode": "123456"
+    },
+    {
+        "firstName": "John",
+        "lastName": "Cena",
+        "userName": "john",
+        "password": "password",
+        "emailId": "john@test.com",
+        "mobileNumber": "1234567891",
+        "address": "11th Main",
+        "pinCode": "123457"
+    },
+    {
+        "firstName": "Jack",
+        "lastName": "Horny",
+        "userName": "jack",
+        "password": "password",
+        "emailId": "jack@test.com",
+        "mobileNumber": "1234567892",
+        "address": "9th Main",
+        "pinCode": "123458"
+    },
+    {
+        "firstName": "Kedarnath",
+        "lastName": "Panigrahy",
+        "userName": "kedar",
+        "password": "password",
+        "emailId": "kedar@test.com",
+        "mobileNumber": "1234567895",
+        "address": "10th Main",
+        "pinCode": "123456"
+    },
+    {
+        "firstName": "Punam",
+        "lastName": "Panigrahy",
+        "userName": "punam",
+        "password": "password",
+        "emailId": "punam@test.com",
+        "mobileNumber": "1234567894",
+        "address": "11th Main",
+        "pinCode": "123457"
+    },
+    {
+        "firstName": "Sunam",
+        "lastName": "Panigrahy",
+        "userName": "sunam",
+        "password": "password",
+        "emailId": "sunam@test.com",
+        "mobileNumber": "1234567893",
+        "address": "9th Main",
+        "pinCode": "123458"
+    }
+]

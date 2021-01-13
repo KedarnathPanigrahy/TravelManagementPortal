@@ -1,0 +1,9 @@
+For React Js Integration :
+
+1. Go to the Project Directory
+2. npx create-react-app <project-name>
+3. cd <project-name>
+4. npm start
+5. npm install react-router
+6. npm install @material-ui/core
+7. npm install @material-ui/icons

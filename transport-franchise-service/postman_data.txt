@@ -1,0 +1,171 @@
+[
+    {
+        "name": "IRCTC",
+        "code": "TR-0001",
+        "type": "train",
+        "vehicles": [
+            {
+                "number": "IND-TR-2378934",
+                "engineNumber": "IND-TR-2378934-7865",
+				"source" : "BNG",
+				"destination" : "BBS"
+            },
+            {
+                "number": "IND-TR-2378935",
+                "engineNumber": "IND-TR-2378934-7876",
+				"source" : "BNG",
+				"destination" : "DL"
+            }
+        ]
+    },
+    {
+        "name": "Khambeswari",
+        "code": "BS-KH-0001",
+        "type": "bus",
+        "vehicles": [
+            {
+                "number": "IND-BS-KH-2378937",
+                "engineNumber": "IND-BS-KH-2378934-7879",
+				"source" : "BBS",
+				"destination" : "DL"
+            },
+            {
+                "number": "IND-BS-KH-2378938",
+                "engineNumber": "IND-BS-KH-2378934-7876",
+				"source" : "HYD",
+				"destination" : "DL"
+            },
+            {
+                "number": "IND-BS-KH-2378939",
+                "engineNumber": "IND-BS-KH-2378934-7873",
+				"source" : "BNG",
+				"destination" : "BBS"
+            }
+        ]
+    },
+    {
+        "name": "SSRBS",
+        "code": "BS-SSRBS-0001",
+        "type": "bus",
+        "vehicles": [
+            {
+                "number": "IND-BS-SSRBS-2378937",
+                "engineNumber": "IND-BS-SSRBS-2378934-7879",
+				"source" : "BBS",
+				"destination" : "BAM"
+            },
+            {
+                "number": "IND-BS-SSRBS-2378938",
+                "engineNumber": "IND-BS-SSRBS-2378934-7876",
+				"source" : "BNG",
+				"destination" : "HYD"
+            },
+            {
+                "number": "IND-BS-SSRBS-2378939",
+                "engineNumber": "IND-BS-SSRBS-2378934-7873",
+				"source" : "BNG",
+				"destination" : "CHN"
+            }
+        ]
+    },
+    {
+        "name": "Litu&Litu",
+        "code": "BS-LL-0001",
+        "type": "bus",
+        "vehicles": [
+            {
+                "number": "IND-BS-LL-2378937",
+                "engineNumber": "IND-BS-LL-2378934-7879",
+				"source" : "BNG",
+				"destination" : "HYD"
+            },
+            {
+                "number": "IND-BS-LL-2378938",
+                "engineNumber": "IND-BS-LL-2378934-7876",
+				"source" : "BNG",
+				"destination" : "CHN"
+            },
+            {
+                "number": "IND-BS-LL-2378939",
+                "engineNumber": "IND-BS-LL-2378934-7873",
+				"source" : "BNG",
+				"destination" : "BBS"
+            }
+        ]
+    },
+    {
+        "name": "Indigo",
+        "code": "FL-INDIGO-0001",
+        "type": "flight",
+        "vehicles": [
+            {
+                "number": "IND-FL-INDIGO-2378937",
+                "engineNumber": "IND-FL-INDIGO-2378934-7879",
+				"source" : "BNG",
+				"destination" : "DL"
+            },
+            {
+                "number": "IND-FL-INDIGO-2378938",
+                "engineNumber": "IND-FL-INDIGO-2378934-7876",
+				"source" : "BNG",
+				"destination" : "BBS"
+            },
+            {
+                "number": "IND-FL-INDIGO-2378939",
+                "engineNumber": "IND-FL-INDIGO-2378934-7873",
+				"source" : "BNG",
+				"destination" : "HYD"
+            }
+        ]
+    },
+    {
+        "name": "AirAsia",
+        "code": "FL-AA-0001",
+        "type": "flight",
+        "vehicles": [
+            {
+                "number": "IND-FL-AA-2378937",
+                "engineNumber": "IND-FL-AA-2378934-7879",
+				"source" : "BNG",
+				"destination" : "DL"
+            },
+            {
+                "number": "IND-FL-AA-2378938",
+                "engineNumber": "IND-FL-AA-2378934-7876",
+				"source" : "BNG",
+				"destination" : "BBS"
+            },
+            {
+                "number": "IND-FL-AA-2378939",
+                "engineNumber": "IND-FL-AA-2378934-7873",
+				"source" : "BNG",
+				"destination" : "HYD"
+            }
+        ]
+    },
+    {
+        "name": "Vistara",
+        "code": "FL-Vistara-0001",
+        "type": "flight",
+        "vehicles": [
+            {
+                "number": "IND-FL-Vistara-2378937",
+                "engineNumber": "IND-FL-Vistara-2378934-7879",
+				"source" : "BNG",
+				"destination" : "DL"
+            },
+            {
+                "number": "IND-FL-Vistara-2378938",
+                "engineNumber": "IND-FL-Vistara-2378934-7876",
+				"source" : "BNG",
+				"destination" : "HYD"
+            },
+            {
+                "number": "IND-FL-Vistara-2378939",
+                "engineNumber": "IND-FL-Vistara-2378934-7873",
+				"source" : "BNG",
+				"destination" : "BBS"
+            }
+        ]
+    }
+]
