@@ -9,3 +9,5 @@ cloud-gateway : Is a gateway service.
 service-registry : Is acts as a registry.
 transport-franchise-service : Is mainly for Transport Management
 transport-management-service : Is the main service from which it reroutes different services depends on the functionality carried out.
+
+For checking service-registry can open the portal at : http://localhost:8761/
