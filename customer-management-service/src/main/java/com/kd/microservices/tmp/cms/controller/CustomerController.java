@@ -39,7 +39,7 @@ public class CustomerController {
     @ApiResponses(value = {@ApiResponse(code = 503, message = "Server Error"),
             @ApiResponse(code = 500, message = "Server Error"), @ApiResponse(code = 400, message = "Service Not Found"),
             @ApiResponse(code = 202, message = "Customer Registered"), @ApiResponse(code = 200, message = "Customer Registered")})
-    ResponseEntity<CustomerDto> saveCustomer(@RequestBody CustomerDto dto) {
+    ResponseEntity<String> saveCustomer(@RequestBody CustomerDto dto) {
         return new ResponseEntity<>(customerService.saveCustomer(dto), HttpStatus.OK);
     }
 
@@ -49,8 +49,8 @@ public class CustomerController {
     @ApiResponses(value = {@ApiResponse(code = 503, message = "Server Error"),
             @ApiResponse(code = 500, message = "Server Error"), @ApiResponse(code = 400, message = "Service Not Found"),
             @ApiResponse(code = 202, message = "Customer Registered"), @ApiResponse(code = 200, message = "Customer Registered")})
-    void saveCustomerList(@RequestBody List<Customer> customers) {
-        customerService.saveCustomerList(customers);
+    ResponseEntity<String> saveCustomerList(@RequestBody List<Customer> customers) {
+        return new ResponseEntity<>(customerService.saveCustomerList(customers), HttpStatus.OK);
     }
 
     @GetMapping("/getById/{id}")

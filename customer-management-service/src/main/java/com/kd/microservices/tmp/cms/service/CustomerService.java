@@ -18,7 +18,7 @@ public class CustomerService {
     @Autowired
     CustomerRepository customerRepository;
 
-    public CustomerDto saveCustomer(CustomerDto dto) {
+    public String saveCustomer(CustomerDto dto) {
         Customer customer = new Customer();
         customer.setAddress(dto.getAddress());
         customer.setCreatedDate(new Date());
@@ -32,7 +32,7 @@ public class CustomerService {
         customer.setPassword(dto.getPassword());
         customerRepository.save(customer);
 
-        return dto;
+        return Constants.CUST_REG_SUCCESS;
     }
 
     @Performance
@@ -46,8 +46,9 @@ public class CustomerService {
     }
 
     @Performance
-    public void saveCustomerList(List<Customer> customers) {
+    public String saveCustomerList(List<Customer> customers) {
         customerRepository.saveAll(customers);
+        return Constants.CUST_REG_SUCCESS;
     }
 
     @Performance
