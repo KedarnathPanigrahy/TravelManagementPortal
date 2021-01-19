@@ -10,7 +10,11 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
+
+import com.kd.microservices.tmp.ns.constant.Constants;
+import com.kd.microservices.tmp.ns.dto.BookingDto;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -32,28 +36,24 @@ public class NotifyService {
 					return new PasswordAuthentication("test@gmail.com", "oecjzzaajbjfbbbi");
 				}
 			});
-			
+
 			Message msg = new MimeMessage(session);
 			msg.setFrom(new InternetAddress("test@gmail.com", false));
 
 			msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email));
 			msg.setSubject("Sample Email");
-			msg.setContent("Hey "+ user + ", this is the sample email.", "text/html");
+			msg.setContent("Hey " + user + ", this is the sample email.", "text/html");
 			msg.setSentDate(new Date());
 
-//			MimeBodyPart messageBodyPart = new MimeBodyPart();
-//			messageBodyPart.setContent("SimpleEmail", "text/html");
-//			Multipart multipart = new MimeMultipart();
-//			multipart.addBodyPart(messageBodyPart);
-//			MimeBodyPart attachPart = new MimeBodyPart();
-//			attachPart.attachFile("/var/tmp/image19.png");
-//			multipart.addBodyPart(attachPart);
-//			msg.setContent(multipart);
-			
 			Transport.send(msg);
 			log.info("Mail Sent to : " + email);
 		} catch (Exception e) {
 			log.error("Error at NotifyService - notifyUser : " + e.getMessage());
 		}
+	}
+	
+	@RabbitListener(queues = Constants.QUEUE)
+	public void consumeMessageFromQueue(BookingDto dto) {
+		log.info("Message Received from Queue : " + dto);
 	}
 }

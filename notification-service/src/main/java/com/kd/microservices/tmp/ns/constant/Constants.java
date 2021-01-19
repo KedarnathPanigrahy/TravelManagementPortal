@@ -1,7 +1,6 @@
-package com.kd.microservices.tmp.tms.constant;
+package com.kd.microservices.tmp.ns.constant;
 
 public interface Constants {
-	String INVALID_USER = "Please enter Username/Password.";
 	String SUCCESS = "Success";
 	String FAILURE = "Failure";
 

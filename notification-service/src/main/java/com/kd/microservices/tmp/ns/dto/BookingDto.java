@@ -1,4 +1,4 @@
-package com.kd.microservices.tmp.tms.dto;
+package com.kd.microservices.tmp.ns.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
